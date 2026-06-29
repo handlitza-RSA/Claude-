@@ -1,0 +1,114 @@
+# HandlT UI package
+
+This is a ready-to-run static front-end for HandlT.
+
+## Pages included
+
+- `index.html` - mobile-first landing page with announcement banner, menu, hero, five event cards, CTA, bottom review strip, WhatsApp button and quote modal.
+- `quote.html` - full quote form page for direct links or menu clicks.
+- `services.html` - simple service overview page.
+- `reviews.html` - review placeholder page. Replace the placeholder copy with real reviews only.
+- `contact.html` - WhatsApp, email and social contact page.
+
+## Files included
+
+- `styles.css` - full responsive design system and layout.
+- `app.js` - menu drawer, quote modal, event pre-select, form capture, deep-link pre-fill (`quote.html?event=Wedding`) and WhatsApp message generation.
+- `assets/` - HandlT logo (`handlt-logo.png`), chat bubble, a reviews star and six collage-style SVG event illustrations.
+
+## How to preview
+
+Open `index.html` in a browser.
+
+For a better local preview, run:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+## How the quote form works
+
+The form does not require a database. On submit it:
+
+1. Captures the event details.
+2. Saves the last quote locally in the browser as `handlt:lastQuote`.
+3. Opens WhatsApp to `+27 73 088 2155` with the event details pre-filled.
+
+## Google Form or CRM connection
+
+The current version is set up for a frictionless WhatsApp flow. To connect it to Google Forms, Base44, Supabase, Airtable, HubSpot or another CRM, replace the submit logic inside `app.js` in the `data-quote-form` submit handler.
+
+The form field names are:
+
+- `eventType`
+- `eventDate`
+- `location`
+- `guests`
+- `needs`
+- `name`
+- `phone`
+- `notes`
+- `inspiration`
+- `venue`
+
+## Replace collage artwork with real cut-out PNGs
+
+The included SVG files create the correct layout and visual direction. For the closest AnyVan-style feeling, replace these with transparent PNG cut-outs from your actual event inventory or Canva exports:
+
+- `assets/birthday-collage.svg`
+- `assets/wedding-collage.svg`
+- `assets/corporate-collage.svg`
+- `assets/religious-collage.svg`
+- `assets/other-collage.svg`
+- `assets/sound-collage.svg`
+
+Keep the same file names or update the image paths in the HTML.
+
+## Brand tokens
+
+```css
+--handlt-black:  #000000;
+--handlt-cream:  #F5E6CA;
+--handlt-white:  #FAF9F7;  /* off-white surface */
+--handlt-taupe:  #8C756A;  /* accent */
+```
+
+Tonal tints/shades of these four (e.g. `#FBF3E2`, `#B7A89E`, `#5E4F47`, `#ECE3D4`) are used for depth, but no colour outside this palette appears anywhere in the UI or the illustrations.
+
+Type: **Montserrat** (700–900) for display/headings, **Inter** for body text (a free stand-in for the brand's TT Norms), both loaded from Google Fonts with system fallbacks.
+
+## Main copy
+
+Hero:
+
+```text
+You bring the crowd.
+We'll HandlT.
+```
+
+CTA:
+
+```text
+Get my quote
+```
+
+Trust strip:
+
+```text
+Real setups. Real events. Real feedback.
+```
+
+## Important note
+
+The layout intentionally matches the UX structure you described: banner, header, hero, visual service cards, CTA, trust strip, floating chat and slide-out menu. It does not use AnyVan assets, AnyVan branding or copied imagery.
+
+## What the slide-out menu links to
+
+Birthday Events, Wedding Setups, Corporate Events, Religious Gatherings, Sound & Lighting, Decor & Setup, Tables & Chairs, Delivery & Collection, Reviews and Contact HandlT — plus WhatsApp, IG, TikTok and email at the bottom.
+
