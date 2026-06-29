@@ -12,20 +12,36 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="home">
   <div class="page-shell">
-    <div class="announcement" role="banner"><span aria-hidden="true">&#10024;</span><span>Cape Town events made simple. <button type="button" data-open-quote>Get a quote in under 60 seconds.</button></span></div>
+
+    <div class="announcement" role="banner">
+      <span aria-hidden="true">&#10024;</span>
+      <span>Cape Town events made simple. <button type="button" data-open-quote>Get a quote in under 60 seconds.</button></span>
+    </div>
+
     <header class="topbar" aria-label="Main header">
       <button class="icon-button" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" data-open-menu>
         <span class="menu-lines" aria-hidden="true"><span></span></span>
       </button>
-      <a class="brand" href="index.html" aria-label="HandlT home"><img src="assets/handlt-logo.png" alt="HandlT"></a>
+
+      <a class="brand" href="index.html" aria-label="HandlT home">
+        <img src="assets/handlt-logo.png" alt="HandlT">
+      </a>
     </header>
 
     <main class="landing" id="main">
       <section class="hero-copy" aria-labelledby="hero-title">
-        <h1 class="hero-title" id="hero-title">You bring the crowd.<br><span class="accent">We&rsquo;ll HandlT.</span></h1>
-        <p class="hero-subtitle">Sound, lighting, decor and event essentials for birthdays, weddings, corporate events, religious gatherings and more.</p>
+        <h1 class="hero-title" id="hero-title">
+          You bring the crowd.<br>
+          <span class="accent">We&rsquo;ll HandlT.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Sound, lighting, decor and event essentials for birthdays, weddings, corporate events, religious gatherings and more.
+        </p>
+
         <div class="section-kicker" aria-label="Choose what you are planning">
           <span>What are you planning?</span>
           <span>Tap one</span>
@@ -33,11 +49,57 @@
       </section>
 
       <section class="event-grid" aria-label="Popular event types">
-        <button class="event-card" type="button" data-event="Birthday" data-open-quote><span class="card-art" aria-hidden="true"><img src="assets/birthday-collage.svg" alt=""></span><span class="card-footer"><span class="card-title">Birthday</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span></button>
-        <button class="event-card" type="button" data-event="Wedding" data-open-quote><span class="card-art" aria-hidden="true"><img src="assets/wedding-collage.svg" alt=""></span><span class="card-footer"><span class="card-title">Wedding</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span></button>
-        <button class="event-card" type="button" data-event="Corporate" data-open-quote><span class="card-art" aria-hidden="true"><img src="assets/corporate-collage.svg" alt=""></span><span class="card-footer"><span class="card-title">Corporate</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span></button>
-        <button class="event-card" type="button" data-event="Religious" data-open-quote><span class="card-art" aria-hidden="true"><img src="assets/religious-collage.svg" alt=""></span><span class="card-footer"><span class="card-title">Religious</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span></button>
-        <button class="event-card" type="button" data-event="Other" data-open-quote><span class="card-art" aria-hidden="true"><img src="assets/other-collage.svg" alt=""></span><span class="card-footer"><span class="card-title">Other</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span></button>
+
+        <button class="event-card" type="button" data-event="Birthday" data-open-quote>
+          <span class="card-art" aria-hidden="true">
+            <img src="assets/birthday-collage.png" alt="">
+          </span>
+          <span class="card-footer">
+            <span class="card-title">Birthday</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </span>
+        </button>
+
+        <button class="event-card" type="button" data-event="Wedding" data-open-quote>
+          <span class="card-art" aria-hidden="true">
+            <img src="assets/wedding-collage.png" alt="">
+          </span>
+          <span class="card-footer">
+            <span class="card-title">Wedding</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </span>
+        </button>
+
+        <button class="event-card" type="button" data-event="Corporate" data-open-quote>
+          <span class="card-art" aria-hidden="true">
+            <img src="assets/corporate-collage.png" alt="">
+          </span>
+          <span class="card-footer">
+            <span class="card-title">Corporate</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </span>
+        </button>
+
+        <button class="event-card" type="button" data-event="Religious" data-open-quote>
+          <span class="card-art" aria-hidden="true">
+            <img src="assets/religious-collage.png" alt="">
+          </span>
+          <span class="card-footer">
+            <span class="card-title">Religious</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </span>
+        </button>
+
+        <button class="event-card" type="button" data-event="Other" data-open-quote>
+          <span class="card-art" aria-hidden="true">
+            <img src="assets/other-collage.png" alt="">
+          </span>
+          <span class="card-footer">
+            <span class="card-title">Other</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </span>
+        </button>
+
       </section>
 
       <section class="quote-inline" aria-label="Get a quote">
@@ -53,11 +115,15 @@
       </div>
       <a href="reviews.html">View reviews</a>
     </section>
+
   </div>
 
-  <a class="floating-chat" href="https://wa.me/27730882155?text=Hi%20HandlT%2C%20I%20need%20help%20with%20an%20event%20quote." target="_blank" rel="noopener" aria-label="Chat to HandlT on WhatsApp"><img src="assets/chat-bubble.svg" alt=""></a>
+  <a class="floating-chat" href="https://wa.me/27730882155?text=Hi%20HandlT%2C%20I%20need%20help%20with%20an%20event%20quote." target="_blank" rel="noopener" aria-label="Chat to HandlT on WhatsApp">
+    <img src="assets/chat-bubble.png" alt="">
+  </a>
 
   <div class="drawer-scrim" data-close-menu></div>
+
   <aside class="drawer" id="site-menu" aria-label="HandlT menu" aria-hidden="true">
     <div class="drawer-head">
       <img class="drawer-logo" src="assets/handlt-logo.png" alt="HandlT">
@@ -65,21 +131,125 @@
     </div>
 
     <p class="drawer-section-title">What are you planning?</p>
+
     <nav class="menu-list" aria-label="Service navigation">
-      <a class="menu-item" href="quote.html?event=Birthday"><span class="menu-thumb"><img src="assets/birthday-collage.svg" alt=""></span><span class="menu-text"><strong>Birthday Events</strong><span>Party setup made simple</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="quote.html?event=Wedding"><span class="menu-thumb"><img src="assets/wedding-collage.svg" alt=""></span><span class="menu-text"><strong>Wedding Setups</strong><span>Clean decor and support</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="quote.html?event=Corporate"><span class="menu-thumb"><img src="assets/corporate-collage.svg" alt=""></span><span class="menu-text"><strong>Corporate Events</strong><span>Sound, screens and setup</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="quote.html?event=Religious"><span class="menu-thumb"><img src="assets/religious-collage.svg" alt=""></span><span class="menu-text"><strong>Religious Gatherings</strong><span>Respectful community setup</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="services.html#sound"><span class="menu-thumb"><img src="assets/sound-collage.svg" alt=""></span><span class="menu-text"><strong>Sound &amp; Lighting</strong><span>Speakers, mics and lights</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="services.html#decor"><span class="menu-thumb"><img src="assets/wedding-collage.svg" alt=""></span><span class="menu-text"><strong>Decor &amp; Setup</strong><span>Styling and on-site setup</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="services.html#tables"><span class="menu-thumb"><img src="assets/other-collage.svg" alt=""></span><span class="menu-text"><strong>Tables &amp; Chairs</strong><span>Seating and table basics</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="services.html#delivery"><span class="menu-thumb"><img src="assets/other-collage.svg" alt=""></span><span class="menu-text"><strong>Delivery &amp; Collection</strong><span>We drop off and collect</span></span><span class="menu-item-arrow">&rarr;</span></a>
+
+      <a class="menu-item" href="quote.html?event=Birthday">
+        <span class="menu-thumb">
+          <img src="assets/birthday-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Birthday Events</strong>
+          <span>Party setup made simple</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="quote.html?event=Wedding">
+        <span class="menu-thumb">
+          <img src="assets/wedding-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Wedding Setups</strong>
+          <span>Clean decor and support</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="quote.html?event=Corporate">
+        <span class="menu-thumb">
+          <img src="assets/corporate-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Corporate Events</strong>
+          <span>Sound, screens and setup</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="quote.html?event=Religious">
+        <span class="menu-thumb">
+          <img src="assets/religious-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Religious Gatherings</strong>
+          <span>Respectful community setup</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="services.html#sound">
+        <span class="menu-thumb">
+          <img src="assets/corporate-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Sound &amp; Lighting</strong>
+          <span>Speakers, mics and lights</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="services.html#decor">
+        <span class="menu-thumb">
+          <img src="assets/wedding-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Decor &amp; Setup</strong>
+          <span>Styling and on-site setup</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="services.html#tables">
+        <span class="menu-thumb">
+          <img src="assets/other-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Tables &amp; Chairs</strong>
+          <span>Seating and table basics</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="services.html#delivery">
+        <span class="menu-thumb">
+          <img src="assets/other-collage.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Delivery &amp; Collection</strong>
+          <span>We drop off and collect</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
     </nav>
 
     <p class="drawer-section-title">More</p>
+
     <nav class="menu-list" aria-label="More navigation">
-      <a class="menu-item" href="reviews.html"><span class="menu-thumb"><img src="assets/reviews-star.svg" alt=""></span><span class="menu-text"><strong>Reviews</strong><span>Real setups and feedback</span></span><span class="menu-item-arrow">&rarr;</span></a>
-      <a class="menu-item" href="contact.html"><span class="menu-thumb"><img src="assets/chat-bubble.svg" alt=""></span><span class="menu-text"><strong>Contact HandlT</strong><span>WhatsApp, email and socials</span></span><span class="menu-item-arrow">&rarr;</span></a>
+
+      <a class="menu-item" href="reviews.html">
+        <span class="menu-thumb">
+          <img src="assets/reviews-star.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Reviews</strong>
+          <span>Real setups and feedback</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="contact.html">
+        <span class="menu-thumb">
+          <img src="assets/chat-bubble.png" alt="">
+        </span>
+        <span class="menu-text">
+          <strong>Contact HandlT</strong>
+          <span>WhatsApp, email and socials</span>
+        </span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
     </nav>
 
     <div class="drawer-contact">
@@ -93,6 +263,7 @@
 
   <div class="modal-scrim" data-modal hidden>
     <section class="quote-panel" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+
       <div class="quote-head">
         <div>
           <p>Event quote</p>
@@ -101,75 +272,82 @@
         <button class="close-button" type="button" aria-label="Close quote form" data-close-quote>&times;</button>
       </div>
 
-        <form class="form-grid" data-quote-form>
-          <div class="form-row two">
-            <label>Event type
-              <select class="input" name="eventType" required>
-                <option value="">Choose one</option>
-                <option>Birthday</option>
-                <option>Wedding</option>
-                <option>Corporate</option>
-                <option>Religious</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>Event date
-              <input class="input" type="date" name="eventDate" required>
-            </label>
-          </div>
+      <form class="form-grid" data-quote-form>
 
-          <div class="form-row two">
-            <label>Area / location
-              <input class="input" name="location" autocomplete="address-level2" placeholder="Cape Town, venue, area" required>
-            </label>
-            <label>Guests
-              <input class="input" type="number" name="guests" min="1" placeholder="80" required>
-            </label>
-          </div>
+        <div class="form-row two">
+          <label>Event type
+            <select class="input" name="eventType" required>
+              <option value="">Choose one</option>
+              <option>Birthday</option>
+              <option>Wedding</option>
+              <option>Corporate</option>
+              <option>Religious</option>
+              <option>Other</option>
+            </select>
+          </label>
 
-          <fieldset class="checkbox-group">
-            <legend>What do you need?</legend>
-            <div class="check-pills">
-              <label class="check-pill"><input type="checkbox" name="needs" value="Sound"><span>Sound</span></label>
-              <label class="check-pill"><input type="checkbox" name="needs" value="Lighting"><span>Lighting</span></label>
-              <label class="check-pill"><input type="checkbox" name="needs" value="Decor"><span>Decor</span></label>
-              <label class="check-pill"><input type="checkbox" name="needs" value="Tables"><span>Tables</span></label>
-              <label class="check-pill"><input type="checkbox" name="needs" value="Chairs"><span>Chairs</span></label>
-              <label class="check-pill"><input type="checkbox" name="needs" value="Delivery"><span>Delivery</span></label>
-            </div>
-          </fieldset>
-
-          <div class="form-row two">
-            <label>Name
-              <input class="input" name="name" autocomplete="name" placeholder="Your name" required>
-            </label>
-            <label>WhatsApp number
-              <input class="input" name="phone" inputmode="tel" autocomplete="tel" placeholder="073 088 2155" required>
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>Extra notes
-              <textarea class="input" name="notes" placeholder="Tell us the vibe, venue, timing or what you already have."></textarea>
-            </label>
-          </div>
-
-          <div class="file-row" aria-label="Optional uploads">
-            <label class="file-tile">Inspiration photo<input type="file" name="inspiration" accept="image/*"></label>
-            <label class="file-tile">Venue photo<input type="file" name="venue" accept="image/*"></label>
-          </div>
-
-          <div class="form-actions">
-            <button class="primary-cta" type="submit">Get my quote</button>
-            <p class="form-note">This opens WhatsApp with your details ready to send. You can attach your photos there too.</p>
-          </div>
-        </form>
-
-        <div class="success-box" data-success>
-          <strong>Thanks, we&rsquo;ve got your event details.</strong>
-          The HandlT team will contact you shortly with the best setup options. WhatsApp should already be open with your message ready &mdash; just hit send.
-          <a href="https://wa.me/27730882155" target="_blank" rel="noopener" data-whatsapp-summary>Open WhatsApp again</a>
+          <label>Event date
+            <input class="input" type="date" name="eventDate" required>
+          </label>
         </div>
+
+        <div class="form-row two">
+          <label>Area / location
+            <input class="input" name="location" autocomplete="address-level2" placeholder="Cape Town, venue, area" required>
+          </label>
+
+          <label>Guests
+            <input class="input" type="number" name="guests" min="1" placeholder="80" required>
+          </label>
+        </div>
+
+        <fieldset class="checkbox-group">
+          <legend>What do you need?</legend>
+
+          <div class="check-pills">
+            <label class="check-pill"><input type="checkbox" name="needs" value="Sound"><span>Sound</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Lighting"><span>Lighting</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Decor"><span>Decor</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Tables"><span>Tables</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Chairs"><span>Chairs</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Delivery"><span>Delivery</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-row two">
+          <label>Name
+            <input class="input" name="name" autocomplete="name" placeholder="Your name" required>
+          </label>
+
+          <label>WhatsApp number
+            <input class="input" name="phone" inputmode="tel" autocomplete="tel" placeholder="073 088 2155" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Extra notes
+            <textarea class="input" name="notes" placeholder="Tell us the vibe, venue, timing or what you already have."></textarea>
+          </label>
+        </div>
+
+        <div class="file-row" aria-label="Optional uploads">
+          <label class="file-tile">Inspiration photo<input type="file" name="inspiration" accept="image/*"></label>
+          <label class="file-tile">Venue photo<input type="file" name="venue" accept="image/*"></label>
+        </div>
+
+        <div class="form-actions">
+          <button class="primary-cta" type="submit">Get my quote</button>
+          <p class="form-note">This opens WhatsApp with your details ready to send. You can attach your photos there too.</p>
+        </div>
+
+      </form>
+
+      <div class="success-box" data-success>
+        <strong>Thanks, we&rsquo;ve got your event details.</strong>
+        The HandlT team will contact you shortly with the best setup options. WhatsApp should already be open with your message ready &mdash; just hit send.
+        <a href="https://wa.me/27730882155" target="_blank" rel="noopener" data-whatsapp-summary>Open WhatsApp again</a>
+      </div>
+
     </section>
   </div>
 
