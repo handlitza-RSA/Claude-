@@ -1310,3 +1310,108 @@ textarea:focus {
     transform: none;
   }
 }
+/* =========================================================
+   HANDLT CLEANUP PATCH
+   Paste this at the VERY BOTTOM of styles.css
+   Purpose:
+   - Hide floating chat button globally
+   - Fade out checkerboard backgrounds on uploaded PNG images
+   - Make logo/cards cleaner
+   - Keep the layout simple and premium
+========================================================= */
+
+
+/* 1. Remove the floating chat button completely */
+.floating-chat {
+  display: none !important;
+}
+
+
+/* 2. Make all event artwork blend into the card background */
+.card-art {
+  background: transparent !important;
+  overflow: hidden;
+}
+
+.card-art img {
+  mix-blend-mode: multiply;
+  filter: contrast(1.05) saturate(0.96);
+  opacity: 0.98;
+}
+
+
+/* 3. Clean logo background as much as possible */
+.brand {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.brand img,
+.drawer-logo {
+  mix-blend-mode: multiply;
+  filter: contrast(1.08);
+}
+
+
+/* 4. Make menu thumbnails look cleaner */
+.menu-thumb {
+  background: var(--handlt-cream-2) !important;
+  overflow: hidden;
+}
+
+.menu-thumb img {
+  mix-blend-mode: multiply;
+  filter: contrast(1.05) saturate(0.96);
+}
+
+
+/* 5. Make event cards feel cleaner and softer */
+.event-card {
+  background: linear-gradient(180deg, #fbf3e2 0%, #f5e6ca 100%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.event-card[data-event="Wedding"],
+.event-card[data-event="Other"] {
+  background: linear-gradient(180deg, #faf9f7 0%, #fbf3e2 100%) !important;
+}
+
+.event-card[data-event="Corporate"] {
+  background: linear-gradient(180deg, #faf9f7 0%, #ece3d4 100%) !important;
+}
+
+
+/* 6. Clean white footer on cards */
+.card-footer {
+  background: rgba(250, 249, 247, 0.96) !important;
+  backdrop-filter: blur(10px);
+}
+
+
+/* 7. Clean service page artwork cards */
+.service-tile .card-art {
+  background: linear-gradient(180deg, #faf9f7 0%, #fbf3e2 100%) !important;
+}
+
+
+/* 8. Hide broken image icon styling if browser shows one */
+img {
+  border: 0;
+}
+
+
+/* 9. Mobile polish */
+@media (max-width: 560px) {
+  .brand,
+  .brand img {
+    width: 118px !important;
+  }
+
+  .card-art img {
+    transform: scale(1.05);
+  }
+
+  .event-card[data-event="Other"] .card-art img {
+    transform: scale(0.98);
+  }
+}
