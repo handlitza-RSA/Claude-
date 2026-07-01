@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5E6CA">
+  <meta name="description" content="HandlT equipment rental catalogue for sound, lighting, staging, generators and event packages.">
+  <title>Catalogue | HandlT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .catalogue-page {
+      width: min(100%, 1080px);
+      margin: 0 auto;
+      padding: 18px 16px 50px;
+    }
+
+    .catalogue-hero {
+      background: #111111;
+      color: #faf9f7;
+      border-radius: 28px;
+      padding: 28px 18px;
+      text-align: center;
+      box-shadow: 0 14px 34px rgba(31, 23, 18, 0.16);
+    }
+
+    .catalogue-hero h1 {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-size: clamp(34px, 7vw, 70px);
+      line-height: 0.92;
+      font-weight: 950;
+      letter-spacing: -0.07em;
+    }
+
+    .catalogue-hero p {
+      margin: 10px auto 0;
+      max-width: 620px;
+      color: #d9cfc9;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .catalogue-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .catalogue-button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: #faf9f7;
+      color: #000000;
+      font-weight: 950;
+      font-family: "Montserrat", system-ui, sans-serif;
+      letter-spacing: -0.04em;
+      text-decoration: none;
+    }
+
+    .catalogue-button.dark {
+      background: #8c756a;
+      color: #faf9f7;
+    }
+
+    .catalogue-section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 34px 0 14px;
+    }
+
+    .catalogue-section-title span {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: #000000;
+      color: #faf9f7;
+      font-size: 16px;
+    }
+
+    .catalogue-section-title h2 {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .catalogue-section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #d9cfc9;
+    }
+
+    .catalogue-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #faf9f7;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(31, 23, 18, 0.12);
+      margin-bottom: 18px;
+    }
+
+    .catalogue-table th {
+      background: #000000;
+      color: #faf9f7;
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 12px;
+    }
+
+    .catalogue-table td {
+      padding: 12px;
+      border-bottom: 1px solid #ece3d4;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 650;
+      color: #000000;
+      vertical-align: top;
+    }
+
+    .catalogue-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .catalogue-price {
+      color: #8c756a !important;
+      font-weight: 950 !important;
+      white-space: nowrap;
+    }
+
+    .catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .catalogue-card {
+      background: #faf9f7;
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: 0 10px 28px rgba(31, 23, 18, 0.12);
+    }
+
+    .catalogue-card small {
+      display: inline-flex;
+      margin-bottom: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #000000;
+      color: #faf9f7;
+      font-size: 10px;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .catalogue-card h3 {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+    }
+
+    .catalogue-card p {
+      margin: 8px 0 0;
+      color: #7a6e66;
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 650;
+    }
+
+    .catalogue-card strong {
+      display: block;
+      margin-top: 12px;
+      color: #8c756a;
+      font-size: 15px;
+      font-weight: 950;
+    }
+
+    @media (max-width: 600px) {
+      .catalogue-table th,
+      .catalogue-table td {
+        font-size: 12px;
+        padding: 10px;
+      }
+
+      .catalogue-price {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="simple-page">
+
+    <div class="announcement" role="banner">
+      <span aria-hidden="true">&#10024;</span>
+      <span>You bring the crowd. We&rsquo;ll HandlT.</span>
+    </div>
+
+    <header class="topbar" aria-label="Main header">
+      <button class="icon-button" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" data-open-menu>
+        <span class="menu-lines" aria-hidden="true"><span></span></span>
+      </button>
+
+      <a class="brand" href="index.html" aria-label="HandlT home">
+        <img src="assets/handlt-logo.png" alt="HandlT">
+      </a>
+    </header>
+
+    <main class="catalogue-page">
+
+      <a class="back-link" href="index.html">&larr; Back home</a>
+
+      <section class="catalogue-hero">
+        <h1>Equipment Rental Catalogue</h1>
+        <p>Sound, lighting, DJ equipment, staging, generators and event essentials for simple Cape Town events.</p>
+
+        <div class="catalogue-actions">
+          <a class="catalogue-button" href="quote.html">Get my quote</a>
+          <a class="catalogue-button dark" href="assets/handlt-catalogue.pdf" download>Download PDF</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="catalogue-section-title" id="packages">
+          <span>🎁</span>
+          <h2>Birthday Event Packages</h2>
+        </div>
+
+        <table class="catalogue-table">
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Includes</th>
+              <th>From</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Basic Party Package</strong></td>
+              <td>1 speaker, 1 microphone, basic setup</td>
+              <td class="catalogue-price">R1,500</td>
+            </tr>
+            <tr>
+              <td><strong>Party Plus Package</strong></td>
+              <td>Sound system, wireless mic, basic party lighting</td>
+              <td class="catalogue-price">R2,950</td>
+            </tr>
+            <tr>
+              <td><strong>Birthday Sound &amp; Lights</strong></td>
+              <td>2 speakers, mic, party lights, setup support</td>
+              <td class="catalogue-price">R3,500</td>
+            </tr>
+            <tr>
+              <td><strong>Premium Birthday Setup</strong></td>
+              <td>Sound, lighting, basic decor, tables/chairs support</td>
+              <td class="catalogue-price">R5,500</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <div class="catalogue-section-title" id="sound">
+          <span>🔊</span>
+          <h2>Sound &amp; PA Systems</h2>
+        </div>
+
+        <div class="catalogue-grid">
+          <article class="catalogue-card">
+            <small>Sound</small>
+            <h3>Pioneer XDJ-RX3</h3>
+            <p>All-in-one DJ controller with standalone performance, dual-deck layout and large touchscreen.</p>
+            <strong>POA</strong>
+          </article>
+
+          <article class="catalogue-card">
+            <small>Sound</small>
+            <h3>Basic PA Setup</h3>
+            <p>One speaker and one microphone for small indoor events.</p>
+            <strong>From R1,500</strong>
+          </article>
+
+          <article class="catalogue-card">
+            <small>Sound</small>
+            <h3>Party Sound Setup</h3>
+            <p>Two speakers, microphone and support for birthdays and private events.</p>
+            <strong>From R3,500</strong>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="catalogue-section-title" id="staging">
+          <span>🏗️</span>
+          <h2>Staging &amp; Truss</h2>
+        </div>
+
+        <div class="catalogue-grid">
+          <article class="catalogue-card">
+            <small>Staging</small>
+            <h3>Stage Deck 1m x 1m</h3>
+            <p>Professional stage deck. Modular design for flexible stage configurations.</p>
+            <strong>From R450</strong>
+          </article>
+
+          <article class="catalogue-card">
+            <small>Staging</small>
+            <h3>Small Stage 2m x 2m</h3>
+            <p>Perfect size for solo acts or small presentations.</p>
+            <strong>From R1,800</strong>
+          </article>
+
+          <article class="catalogue-card">
+            <small>Staging</small>
+            <h3>Medium Stage 4m x 3m</h3>
+            <p>Great for small bands and corporate speakers.</p>
+            <strong>From R5,500</strong>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="catalogue-section-title" id="generators">
+          <span>⚡</span>
+          <h2>Generators &amp; Essentials</h2>
+        </div>
+
+        <div class="catalogue-grid">
+          <article class="catalogue-card">
+            <small>Generator</small>
+            <h3>2.5kVA Generator</h3>
+            <p>Reliable portable generator. Ideal for outdoor events without mains power.</p>
+            <strong>From R900</strong>
+          </article>
+
+          <article class="catalogue-card">
+            <small>Generator</small>
+            <h3>5kVA Generator</h3>
+            <p>Heavy-duty portable generator for large events. Higher wattage output.</p>
+            <strong>From R1,500</strong>
+          </article>
+
+          <article class="catalogue-card">
+            <small>Essentials</small>
+            <h3>Power Distribution</h3>
+            <p>Safe and efficient power routing for your event setup.</p>
+            <strong>From R450</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" style="margin-top:24px;text-align:center;">
+        <h2 style="margin:0 0 8px;font-size:24px;font-weight:950;letter-spacing:-0.05em;">Need an exact quote?</h2>
+        <p style="margin:0 auto 14px;max-width:560px;color:var(--handlt-muted);font-weight:650;line-height:1.45;">
+          Pricing depends on event size, area, delivery, setup and availability. Send us the basics and we will guide you.
+        </p>
+        <a class="primary-cta" style="max-width:320px;margin:0 auto;" href="quote.html">Get my quote</a>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="drawer-scrim" data-close-menu></div>
+
+  <aside class="drawer" id="site-menu" aria-label="HandlT menu" aria-hidden="true">
+    <div class="drawer-head">
+      <img class="drawer-logo" src="assets/handlt-logo.png" alt="HandlT">
+      <button class="close-button" type="button" aria-label="Close menu" data-close-menu>&times;</button>
+    </div>
+
+    <p class="drawer-section-title">Menu</p>
+
+    <nav class="menu-list" aria-label="Site navigation">
+      <a class="menu-item" href="index.html">
+        <span class="menu-thumb"><img src="assets/handlt-logo.png" alt=""></span>
+        <span class="menu-text"><strong>Home</strong><span>Main landing page</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="quote.html">
+        <span class="menu-thumb"><img src="assets/chat-bubble.png" alt=""></span>
+        <span class="menu-text"><strong>Get a Quote</strong><span>Quick event form</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="services.html">
+        <span class="menu-thumb"><img src="assets/corporate-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Services</strong><span>What HandlT can support</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="reviews.html">
+        <span class="menu-thumb"><img src="assets/reviews-star.png" alt=""></span>
+        <span class="menu-text"><strong>Reviews</strong><span>Event notes and feedback</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="contact.html">
+        <span class="menu-thumb"><img src="assets/chat-bubble.png" alt=""></span>
+        <span class="menu-text"><strong>Contact HandlT</strong><span>WhatsApp, email and socials</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+    </nav>
+
+    <div class="drawer-contact">
+      <strong>HandlT</strong>
+      WhatsApp: +27 73 088 2155<br>
+      IG: @HANDLT_ZA<br>
+      TikTok: @HANDLT_ZA<br>
+      Email: handlit.za@gmail.com
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
