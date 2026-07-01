@@ -7,229 +7,11 @@
   <meta name="description" content="HandlT makes event setup simple. Choose your event type and get a quote for sound, lighting, decor and essentials in under 60 seconds.">
   <link rel="preload" href="assets/handlt-logo.png" as="image">
   <title>HandlT | You bring the crowd. We&rsquo;ll HandlT.</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap">
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* ── CATALOGUE SCOPED STYLES ─────────────────────────────────────────── */
-    :root {
-      --cat-black: #000000;
-      --cat-dark: #0d0d0d;
-      --cat-off-white: #faf9f7;
-      --cat-light-beige: #f5e6ca;
-      --cat-warm-taupe: #8c756a;
-      --cat-white: #faf9f7;
-      --cat-mid-grey: #d9cfc9;
-      --cat-text-grey: #8c756a;
-    }
-
-    .catalogue-section {
-      background: var(--cat-off-white);
-      color: var(--cat-black);
-      padding: 40px 24px 60px;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 12px;
-      margin-top: 32px;
-    }
-
-    /* Hero Band */
-    .cat-hero {
-      background: var(--cat-dark);
-      color: var(--cat-white);
-      text-align: center;
-      padding: 48px 32px;
-      border-radius: 12px;
-    }
-    .cat-hero h2 {
-      font-size: 32px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      font-family: 'Montserrat', sans-serif;
-      color: var(--cat-white);
-    }
-    .cat-hero h2 span { color: var(--cat-light-beige); }
-    .cat-hero p { font-size: 15px; color: #aaaaaa; letter-spacing: 1px; }
-    .cat-hero .cat-tagline { font-size: 18px; color: var(--cat-light-beige); margin-top: 10px; font-style: italic; }
-    
-    .cat-category-pills {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-    .cat-pill {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #cccccc;
-      border-radius: 20px;
-      padding: 5px 16px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-    }
-    .cat-pill:hover { background: var(--cat-warm-taupe); border-color: var(--cat-warm-taupe); color: var(--cat-off-white); }
-
-    /* Section Headers */
-    .cat-section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin: 48px 0 24px;
-    }
-    .cat-section-icon {
-      width: 40px; height: 40px;
-      background: var(--cat-black);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
-    }
-    .cat-section-header h3 {
-      font-size: 20px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .cat-section-line { flex: 1; height: 1px; background: var(--cat-mid-grey); }
-
-    /* Product Grid */
-    .cat-product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 20px;
-    }
-    .cat-product-card {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-    .cat-product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.13);
-    }
-    .cat-product-img-wrap {
-      background: #f0f0f0;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-    .cat-product-img-wrap img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-      padding: 12px;
-    }
-    .cat-category-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: var(--cat-black);
-      color: var(--cat-white);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-    .cat-product-info {
-      padding: 16px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .cat-product-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--cat-black);
-      line-height: 1.4;
-    }
-    .cat-product-desc {
-      font-size: 12px;
-      color: var(--cat-text-grey);
-      line-height: 1.5;
-      flex: 1;
-    }
-    .cat-product-price {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--cat-warm-taupe);
-      margin-top: auto;
-    }
-
-    /* Tables */
-    .cat-pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .cat-pricing-table th, .cat-pricing-table td {
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--cat-mid-grey);
-    }
-    .cat-pricing-table th {
-      background: var(--cat-black);
-      color: var(--cat-white);
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .cat-pricing-table tr:last-child td { border-bottom: none; }
-    .cat-pricing-table td { font-size: 14px; color: var(--cat-black); }
-    .cat-pricing-table td.cat-price { font-weight: 700; color: var(--cat-warm-taupe); }
-
-    /* Footer Info Panel */
-    .cat-footer-info {
-      background: var(--cat-black);
-      color: #888888;
-      text-align: center;
-      font-size: 13px;
-      padding: 40px 32px 40px;
-      letter-spacing: 1px;
-      line-height: 1.6;
-      border-radius: 12px;
-      margin-top: 48px;
-    }
-    .cat-footer-info strong { color: var(--cat-white); font-size: 16px; }
-    .cat-footer-grid {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .cat-footer-col { text-align: left; }
-    .cat-footer-col h4 { color: var(--cat-light-beige); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
-    
-    @media (max-width: 600px) {
-      .cat-hero h2 { font-size: 26px; }
-      .cat-footer-grid { flex-direction: column; gap: 30px; text-align: center; }
-      .cat-footer-col { text-align: center; }
-    }
-  </style>
 </head>
 
 <body class="home">
@@ -325,181 +107,7 @@
         <button class="primary-cta" type="button" data-open-quote>Get my quote</button>
         <p class="cta-helper">Quick form. No confusion. We&rsquo;ll guide you.</p>
       </section>
-
-      <section id="catalogue" class="catalogue-section">
-        
-        <div class="cat-hero">
-          <h2>Equipment <span>Rental</span> Catalogue</h2>
-          <p>Sound · Lighting · DJ Equipment · Special Effects · Event Solutions</p>
-          <div class="cat-category-pills">
-            <a class="cat-pill" href="#packages">🎁 Packages</a>
-            <a class="cat-pill" href="#sound">🔊 Sound &amp; PA</a>
-            <a class="cat-pill" href="#staging">🏗️ Staging</a>
-            <a class="cat-pill" href="#generators">⚡ Generators</a>
-          </div>
-        </div>
-        
-        <div class="cat-section-header" id="packages">
-          <div class="cat-section-icon">🎁</div>
-          <h3>Birthday Event Packages</h3>
-          <div class="cat-section-line"></div>
-        </div>
-        <table class="cat-pricing-table">
-          <thead>
-            <tr>
-              <th>Package</th>
-              <th>Includes</th>
-              <th>From</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Basic Party Package</strong></td>
-              <td>1 speaker, 1 microphone, basic setup</td>
-              <td class="cat-price">R1,500</td>
-            </tr>
-            <tr>
-              <td><strong>Party Plus Package</strong></td>
-              <td>Sound system, wireless mic, basic party lighting</td>
-              <td class="cat-price">R2,950</td>
-            </tr>
-            <tr>
-              <td><strong>Birthday Sound & Lights</strong></td>
-              <td>2 speakers, mic, party lights, setup support</td>
-              <td class="cat-price">R3,500</td>
-            </tr>
-            <tr>
-              <td><strong>Premium Birthday Setup</strong></td>
-              <td>Sound, lighting, basic decor, tables/chairs support</td>
-              <td class="cat-price">R5,500</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="cat-section-header" id="sound">
-          <div class="cat-section-icon">🔊</div>
-          <h3>Sound &amp; PA Systems</h3>
-          <div class="cat-section-line"></div>
-        </div>
-        <div class="cat-product-grid">
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Sound</span>
-              <img alt="Pioneer XDJ-RX3" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'&gt;&lt;rect width=\'200\' height=\'200\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src="https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F9b70dbd7-a7f7-4d37-ae4e-ecc2fb3d8a82/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAACjNIUrJN7IjsFYvQxl4oD0h1dmm87BR7SzuNwOW7Xj4&amp;exp=1782711622&amp;osig=AAAAAAAAAOrFzD9fv9HSz74p88pyzPutYUDGSyuvQyueeXC0BOyA&amp;signer=media-rpc&amp;x-canva-quality=thumbnail"/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">Pioneer XDJ-RX3</div>
-              <div class="cat-product-desc">All-in-one DJ controller with standalone performance. Dual-deck layout, large touchscreen, compatible with rekordbox.</div>
-              <div class="cat-product-price">POA</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cat-section-header" id="staging">
-          <div class="cat-section-icon">🏗️</div>
-          <h3>Staging &amp; Truss</h3>
-          <div class="cat-section-line"></div>
-        </div>
-        <div class="cat-product-grid">
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Staging</span>
-              <img alt="Truss System TS18" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'125\'&gt;&lt;rect width=\'200\' height=\'125\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src="https://media.canva.com/v2/image-resize/format:JPG/height:125/quality:75/uri:ifs%3A%2F%2FM%2F31b015e0-c509-4325-b409-fbf5388544fc/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAHlmEFyB7qhK3kBwmGik-KiFhesMhyr-X5iAVSL5jjjg&amp;exp=1782710511&amp;osig=AAAAAAAAAAAAAAAAAAAAAMck7p_z7as5gCUOu99mU3x3yZGwvfa2rPVOziRTWsON&amp;signer=media-rpc&amp;x-canva-quality=thumbnail"/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">Stage Deck 1m x 1m</div>
-              <div class="cat-product-desc">Professional stage deck. Modular design for flexible stage configurations.</div>
-              <div class="cat-product-price">From R450</div>
-            </div>
-          </div>
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Staging</span>
-              <img alt="Small Stage" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'125\'&gt;&lt;rect width=\'200\' height=\'125\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src=""/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">Small Stage 2m x 2m</div>
-              <div class="cat-product-desc">Perfect size for solo acts or small presentations.</div>
-              <div class="cat-product-price">From R1,800</div>
-            </div>
-          </div>
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Staging</span>
-              <img alt="Medium Stage" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'125\'&gt;&lt;rect width=\'200\' height=\'125\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src=""/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">Medium Stage 4m x 3m</div>
-              <div class="cat-product-desc">Great for small bands and corporate speakers.</div>
-              <div class="cat-product-price">From R5,500</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cat-section-header" id="generators">
-          <div class="cat-section-icon">⚡</div>
-          <h3>Generators & Essentials</h3>
-          <div class="cat-section-line"></div>
-        </div>
-        <div class="cat-product-grid">
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Generator</span>
-              <img alt="Generator Model 1" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'&gt;&lt;rect width=\'200\' height=\'200\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src="https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Ff15e9405-5117-411a-8539-e010a96c6ebd/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAPVF3RC36Y6BK9hu4qJEZXemXQZnJckdHSzuujGBYlBD&amp;exp=1782711803&amp;osig=AAAAAAAAAAAAAAAAAAAAAPapoCwRGzoIIZTz02ZPLIZW3sIQlWO5OTKrv_MtwRu9&amp;signer=media-rpc&amp;x-canva-quality=thumbnail"/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">2.5kVA Generator</div>
-              <div class="cat-product-desc">Reliable portable generator. Ideal for outdoor events without mains power.</div>
-              <div class="cat-product-price">From R900</div>
-            </div>
-          </div>
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Generator</span>
-              <img alt="Generator Model 3" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'&gt;&lt;rect width=\'200\' height=\'200\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src="https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Feb4ed709-2b2b-48e7-9914-d01d127baf41/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAKMre67L8upUvbDkEgwmrhP_4EHt_rnmoPGUYUH3J46_&amp;exp=1782709242&amp;osig=AAAAAAAAAAAAAAAAAAAAAG1gpF-qvtVdqsg6w1KnntIyWTCpAQXOFM1i7vhWQl8v&amp;signer=media-rpc&amp;x-canva-quality=thumbnail"/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">5kVA Generator</div>
-              <div class="cat-product-desc">Heavy-duty portable generator for large events. Higher wattage output.</div>
-              <div class="cat-product-price">From R1,500</div>
-            </div>
-          </div>
-          <div class="cat-product-card">
-            <div class="cat-product-img-wrap">
-              <span class="cat-category-badge">Essentials</span>
-              <img alt="Power Distribution" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'&gt;&lt;rect width=\'200\' height=\'200\' fill=\'%23eee\'/&gt;&lt;text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'13\' fill=\'%23999\'&gt;No Image&lt;/text&gt;&lt;/svg&gt;'" src=""/>
-            </div>
-            <div class="cat-product-info">
-              <div class="cat-product-name">Power Distribution</div>
-              <div class="cat-product-desc">Safe and efficient power routing for your event setups.</div>
-              <div class="cat-product-price">From R450</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cat-footer-info">
-          <p style="margin-bottom:6px;"><strong>HandlT Essentials</strong></p>
-          <div class="cat-footer-grid">
-            <div class="cat-footer-col">
-              <h4>Order Terms</h4>
-              <p>Minimum Order: <strong>R1,500</strong></p>
-              <p>Standard Hire Period: <strong>1 Event Day</strong></p>
-              <p>Deposit: <strong>50% to secure booking</strong></p>
-              <p>Final Balance: <strong>Before delivery/setup</strong></p>
-            </div>
-            <div class="cat-footer-col">
-              <h4>Services & Fees</h4>
-              <p>Delivery & Collection: <strong>From R650</strong></p>
-              <p>Basic Setup: <strong>From R350</strong></p>
-              <p>Standard Setup: <strong>From R750</strong></p>
-              <p>Handling Fee: <strong>R150 to R500</strong></p>
-            </div>
-          </div>
-          <p style="margin-top:40px;">Subject to availability · Contact us for exact quotes</p>
-        </div>
-
-      </section>
-      </main>
+    </main>
 
     <section class="trust-strip" aria-label="Reviews and social proof">
       <div class="trust-copy">
@@ -510,10 +118,6 @@
     </section>
 
   </div>
-
-  <a class="floating-chat" href="https://wa.me/27730882155?text=Hi%20HandlT%2C%20I%20need%20help%20with%20an%20event%20quote." target="_blank" rel="noopener" aria-label="Chat to HandlT on WhatsApp">
-    <img src="assets/chat-bubble.png" alt="">
-  </a>
 
   <div class="drawer-scrim" data-close-menu></div>
 
@@ -528,44 +132,160 @@
     <nav class="menu-list" aria-label="Service navigation">
 
       <a class="menu-item" href="quote.html?event=Birthday">
-        <span class="menu-thumb">
-          <img src="assets/birthday-collage.png" alt="">
-        </span>
-        <span class="menu-text">
-          <strong>Birthday Events</strong>
-          <span>Party setup made simple</span>
-        </span>
+        <span class="menu-thumb"><img src="assets/birthday-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Birthday Events</strong><span>Party setup made simple</span></span>
         <span class="menu-item-arrow">&rarr;</span>
       </a>
 
       <a class="menu-item" href="quote.html?event=Wedding">
-        <span class="menu-thumb">
-          <img src="assets/wedding-collage.png" alt="">
-        </span>
-        <span class="menu-text">
-          <strong>Wedding Setups</strong>
-          <span>Clean decor and support</span>
-        </span>
+        <span class="menu-thumb"><img src="assets/wedding-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Wedding Setups</strong><span>Clean decor and support</span></span>
         <span class="menu-item-arrow">&rarr;</span>
       </a>
 
       <a class="menu-item" href="quote.html?event=Corporate">
-        <span class="menu-thumb">
-          <img src="assets/corporate-collage.png" alt="">
-        </span>
-        <span class="menu-text">
-          <strong>Corporate Events</strong>
-          <span>Sound, screens and setup</span>
-        </span>
+        <span class="menu-thumb"><img src="assets/corporate-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Corporate Events</strong><span>Sound, screens and setup</span></span>
         <span class="menu-item-arrow">&rarr;</span>
       </a>
 
       <a class="menu-item" href="quote.html?event=Religious">
-        <span class="menu-thumb">
-          <img src="assets/religious-collage.png" alt="">
-        </span>
-        <span class="menu-text">
-          <strong>Religious Gatherings</strong>
-          <span>Respectful community setup</span>
-        </span>
-        <span
+        <span class="menu-thumb"><img src="assets/religious-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Religious Gatherings</strong><span>Respectful community setup</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+    </nav>
+
+    <p class="drawer-section-title">More</p>
+
+    <nav class="menu-list" aria-label="More navigation">
+
+      <a class="menu-item" href="catalogue.html">
+        <span class="menu-thumb"><img src="assets/other-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Catalogue</strong><span>View packages and rental pricing</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="services.html">
+        <span class="menu-thumb"><img src="assets/corporate-collage.png" alt=""></span>
+        <span class="menu-text"><strong>Services</strong><span>Sound, lighting, decor and setup</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="reviews.html">
+        <span class="menu-thumb"><img src="assets/reviews-star.png" alt=""></span>
+        <span class="menu-text"><strong>Reviews</strong><span>Event notes and feedback</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+      <a class="menu-item" href="contact.html">
+        <span class="menu-thumb"><img src="assets/chat-bubble.png" alt=""></span>
+        <span class="menu-text"><strong>Contact HandlT</strong><span>WhatsApp, email and socials</span></span>
+        <span class="menu-item-arrow">&rarr;</span>
+      </a>
+
+    </nav>
+
+    <div class="drawer-contact">
+      <strong>HandlT</strong>
+      WhatsApp: +27 73 088 2155<br>
+      IG: @HANDLT_ZA<br>
+      TikTok: @HANDLT_ZA<br>
+      Email: handlit.za@gmail.com
+    </div>
+  </aside>
+
+  <div class="modal-scrim" data-modal hidden>
+    <section class="quote-panel" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+
+      <div class="quote-head">
+        <div>
+          <p>Event quote</p>
+          <h2 id="quote-title">Tell us what you need.</h2>
+        </div>
+        <button class="close-button" type="button" aria-label="Close quote form" data-close-quote>&times;</button>
+      </div>
+
+      <form class="form-grid" data-quote-form>
+
+        <div class="form-row two">
+          <label>Event type
+            <select class="input" name="eventType" required>
+              <option value="">Choose one</option>
+              <option>Birthday</option>
+              <option>Wedding</option>
+              <option>Corporate</option>
+              <option>Religious</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>Event date
+            <input class="input" type="date" name="eventDate" required>
+          </label>
+        </div>
+
+        <div class="form-row two">
+          <label>Area / location
+            <input class="input" name="location" autocomplete="address-level2" placeholder="Cape Town, venue, area" required>
+          </label>
+
+          <label>Guests
+            <input class="input" type="number" name="guests" min="1" placeholder="80" required>
+          </label>
+        </div>
+
+        <fieldset class="checkbox-group">
+          <legend>What do you need?</legend>
+
+          <div class="check-pills">
+            <label class="check-pill"><input type="checkbox" name="needs" value="Sound"><span>Sound</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Lighting"><span>Lighting</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Decor"><span>Decor</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Tables"><span>Tables</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Chairs"><span>Chairs</span></label>
+            <label class="check-pill"><input type="checkbox" name="needs" value="Delivery"><span>Delivery</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-row two">
+          <label>Name
+            <input class="input" name="name" autocomplete="name" placeholder="Your name" required>
+          </label>
+
+          <label>WhatsApp number
+            <input class="input" name="phone" inputmode="tel" autocomplete="tel" placeholder="073 088 2155" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Extra notes
+            <textarea class="input" name="notes" placeholder="Tell us the vibe, venue, timing or what you already have."></textarea>
+          </label>
+        </div>
+
+        <div class="file-row" aria-label="Optional uploads">
+          <label class="file-tile">Inspiration photo<input type="file" name="inspiration" accept="image/*"></label>
+          <label class="file-tile">Venue photo<input type="file" name="venue" accept="image/*"></label>
+        </div>
+
+        <div class="form-actions">
+          <button class="primary-cta" type="submit">Get my quote</button>
+          <p class="form-note">This opens WhatsApp with your details ready to send. You can attach your photos there too.</p>
+        </div>
+
+      </form>
+
+      <div class="success-box" data-success>
+        <strong>Thanks, we&rsquo;ve got your event details.</strong>
+        The HandlT team will contact you shortly with the best setup options. WhatsApp should already be open with your message ready &mdash; just hit send.
+        <a href="https://wa.me/27730882155" target="_blank" rel="noopener" data-whatsapp-summary>Open WhatsApp again</a>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
